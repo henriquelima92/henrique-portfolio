@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
+import { contact } from '../data/contact.js'
 
 export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <span className="nav-logo">~/your-name</span>
+        <span className="nav-logo">~/{contact.name.toLowerCase().replace(/\s+/g, '-')}</span>
         <ul className="nav-links">
           <li>
             <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import { contact } from '../data/contact.js'
 
 export default function Home() {
   return (
     <section className="hero">
       <p className="hero-eyebrow">Game Developer / Software Engineer</p>
-      <h1>Your Name</h1>
+      <h1>{contact.name}</h1>
       <p className="hero-role">
         I build games and tools in Unity and C#, with a growing interest in web
         development. This site is itself one of my projects — replace this line
@@ -34,7 +35,7 @@ export default function Home() {
         </div>
         <div className="stat-item">
           <div className="stat-label">Based In</div>
-          <div className="stat-value">Your City, Country</div>
+          <div className="stat-value">{contact.city}, {contact.country}</div>
         </div>
       </div>
     </section>
