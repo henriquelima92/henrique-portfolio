@@ -258,6 +258,30 @@ p {
   flex-direction: column;
   gap: 12px;
   transition: transform 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+
+/* Stretched link: the title's link covers the whole card */
+.project-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.project-card:has(.project-card-link:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.project-card-link:focus-visible {
+  outline: none;
+}
+
+/* Repo/play links sit above the stretched link so they stay clickable */
+.project-links a {
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:hover {
@@ -314,6 +338,68 @@ p {
 
 .project-links a:hover {
   color: var(--color-accent);
+}
+
+/* ============================================================
+   PROJECT DETAIL
+   ============================================================ */
+.back-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.project-detail {
+  padding: 0 24px 96px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.project-detail p {
+  max-width: 680px;
+  font-size: 1rem;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-panel);
+  margin-bottom: 32px;
+}
+
+.video-frame iframe,
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-fallback {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-teal);
+  margin-bottom: 24px;
+}
+
+.video-fallback:hover {
+  color: var(--color-accent);
+}
+
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
 }
 
 /* ============================================================

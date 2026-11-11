@@ -1,8 +1,15 @@
-export default function ProjectCard({ index, title, description, tags, repoUrl, demoUrl }) {
+import { Link } from 'react-router-dom'
+
+export default function ProjectCard({ index, slug, title, description, tags, repoUrl, demoUrl }) {
   return (
     <article className="project-card">
       <span className="project-index">PROJECT / {String(index).padStart(2, '0')}</span>
-      <h3>{title}</h3>
+      <h3>
+        {/* The ::after of this link stretches over the whole card, making it clickable. */}
+        <Link to={`/projects/${slug}`} className="project-card-link">
+          {title}
+        </Link>
+      </h3>
       <p>{description}</p>
       <div className="tag-row">
         {tags.map((tag) => (
