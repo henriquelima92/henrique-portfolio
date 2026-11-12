@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/context.js'
 
-export default function ProjectCard({ index, slug, title, description, tags, repoUrl, demoUrl }) {
+export default function ProjectCard({ slug, title, description, tags, repoUrl, demoUrl }) {
   const { t, pick } = useLanguage()
 
   return (
     <article className="project-card">
-      <span className="project-index">
-        {t('projects.cardIndex')} / {String(index).padStart(2, '0')}
-      </span>
       <h3>
         {/* The ::after of this link stretches over the whole card, making it clickable. */}
         <Link to={`/projects/${slug}`} className="project-card-link">

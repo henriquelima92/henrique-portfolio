@@ -13,8 +13,8 @@ export default function Projects() {
         <p>{t('projects.intro')}</p>
       </header>
       <div className="projects-grid">
-        {projects.map((project, i) => (
-          <ProjectCard key={project.slug} index={i + 1} {...project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} {...project} />
         ))}
       </div>
     </>
