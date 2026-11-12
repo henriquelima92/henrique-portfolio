@@ -3,7 +3,7 @@
 // description: short summary shown on the card. details: paragraphs shown on the project page.
 // Text fields take { en, 'pt-BR' }; a plain string is used for both languages (e.g. titles).
 // tags: short strings for tech/tools used. repoUrl/demoUrl: leave '' to hide the link.
-// videoUrl: YouTube or Vimeo link, or a direct .mp4/.webm file URL; leave '' for no video.
+// videoUrl: youtube.com link (e.g. https://www.youtube.com/watch?v=...); leave '' for no video.
 
 // Placeholder text, shared until each project gets its own. Replace per project.
 const placeholderDescription = {

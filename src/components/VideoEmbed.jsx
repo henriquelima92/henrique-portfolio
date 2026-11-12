@@ -1,39 +1,25 @@
 import { useLanguage } from '../i18n/context.js'
 
-// Turns a YouTube/Vimeo page link into an embed URL, or recognises a direct video file.
-function parseVideo(url) {
+// Turns a youtube.com link (watch?v=, /embed/, /shorts/) into an embed URL.
+function youtubeEmbedUrl(url) {
   let u
   try {
     u = new URL(url)
   } catch {
     return null
   }
-  const host = u.hostname.replace(/^(www\.|m\.)/, '')
+  if (u.hostname.replace(/^(www\.|m\.)/, '') !== 'youtube.com') return null
 
-  if (host === 'youtu.be') {
-    return { kind: 'iframe', src: `https://www.youtube-nocookie.com/embed/${u.pathname.slice(1)}` }
-  }
-  if (host === 'youtube.com' || host === 'youtube-nocookie.com') {
-    const id =
-      u.searchParams.get('v') || u.pathname.match(/^\/(?:embed|shorts|live)\/([^/?]+)/)?.[1]
-    if (id) return { kind: 'iframe', src: `https://www.youtube-nocookie.com/embed/${id}` }
-  }
-  if (host === 'vimeo.com' || host === 'player.vimeo.com') {
-    const id = u.pathname.match(/(\d+)/)?.[1]
-    if (id) return { kind: 'iframe', src: `https://player.vimeo.com/video/${id}` }
-  }
-  if (/\.(mp4|webm|ogg|mov)$/i.test(u.pathname)) {
-    return { kind: 'file', src: url }
-  }
-  return null
+  const id = u.searchParams.get('v') || u.pathname.match(/^\/(?:embed|shorts)\/([^/?]+)/)?.[1]
+  return id ? `https://www.youtube-nocookie.com/embed/${id}` : null
 }
 
 export default function VideoEmbed({ url, title }) {
   const { t } = useLanguage()
-  const video = parseVideo(url)
+  const src = youtubeEmbedUrl(url)
 
-  // Unrecognised link: still offer it, just not embedded.
-  if (!video) {
+  // Not a youtube.com link: still offer it, just not embedded.
+  if (!src) {
     return (
       <a className="video-fallback" href={url} target="_blank" rel="noreferrer">
         {t('projects.watchVideo')}
@@ -43,17 +29,13 @@ export default function VideoEmbed({ url, title }) {
 
   return (
     <div className="video-frame">
-      {video.kind === 'iframe' ? (
-        <iframe
-          src={video.src}
-          title={t('projects.videoTitle', { title })}
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          allowFullScreen
-          loading="lazy"
-        />
-      ) : (
-        <video src={video.src} controls preload="metadata" />
-      )}
+      <iframe
+        src={src}
+        title={t('projects.videoTitle', { title })}
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowFullScreen
+        loading="lazy"
+      />
     </div>
   )
 }
