@@ -441,6 +441,16 @@ p {
   font-weight: 600;
 }
 
+/* Closing note after the sections, e.g. "servers are no longer running" */
+.project-detail .project-note {
+  margin-top: 40px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius);
+  background: var(--color-panel);
+  color: var(--color-text);
+}
+
 .video-frame {
   aspect-ratio: 16 / 9;
   border: 1px solid var(--color-border);
