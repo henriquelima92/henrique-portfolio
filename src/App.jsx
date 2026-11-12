@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import ProjectDetail from './pages/ProjectDetail.jsx'
 import Skills from './pages/Skills.jsx'
+import Resume from './pages/Resume.jsx'
 import Contact from './pages/Contact.jsx'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

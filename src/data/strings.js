@@ -16,6 +16,7 @@ export const strings = {
       home: 'home',
       projects: 'projects',
       skills: 'skills',
+      resume: 'resume',
       contact: 'contact',
       language: 'Language',
     },
@@ -51,6 +52,12 @@ export const strings = {
       title: 'Skills',
       intro: "A rough sense of where I'm strongest and where I'm actively growing.",
     },
+    resume: {
+      eyebrow: 'Experience',
+      title: 'Resume',
+      intro: 'Download my resume as a PDF, in English or Portuguese.',
+      download: 'download ↓',
+    },
     contact: {
       eyebrow: 'Get In Touch',
       title: 'Contact',
@@ -71,6 +78,7 @@ export const strings = {
       home: 'início',
       projects: 'projetos',
       skills: 'habilidades',
+      resume: 'currículo',
       contact: 'contato',
       language: 'Idioma',
     },
@@ -105,6 +113,12 @@ export const strings = {
       eyebrow: 'Competências',
       title: 'Habilidades',
       intro: 'Uma ideia geral de onde sou mais forte e de onde estou evoluindo.',
+    },
+    resume: {
+      eyebrow: 'Experiência',
+      title: 'Currículo',
+      intro: 'Baixe meu currículo em PDF, em português ou inglês.',
+      download: 'baixar ↓',
     },
     contact: {
       eyebrow: 'Fale Comigo',
