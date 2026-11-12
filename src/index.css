@@ -401,6 +401,25 @@ p {
   font-size: 1rem;
 }
 
+.project-section {
+  margin-top: 40px;
+}
+
+.project-section h2 {
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+
+.project-subsection {
+  margin-top: 24px;
+}
+
+.project-subsection h3 {
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  margin-bottom: 0.2em;
+}
+
 .video-frame {
   aspect-ratio: 16 / 9;
   border: 1px solid var(--color-border);

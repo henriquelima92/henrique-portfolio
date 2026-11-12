@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard.jsx'
-import { projects } from '../data/projects.js'
+import { projects } from '../data/projects/index.js'
 import { useLanguage } from '../i18n/context.js'
 
 export default function Projects() {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/context.js'
 
-export default function ProjectCard({ slug, title, description, tags, repoUrl, demoUrl }) {
+export default function ProjectCard({ slug, title, content, tags, repoUrl, demoUrl }) {
   const { t, pick } = useLanguage()
 
   return (
@@ -12,7 +12,7 @@ export default function ProjectCard({ slug, title, description, tags, repoUrl, d
           {pick(title)}
         </Link>
       </h3>
-      <p>{pick(description)}</p>
+      <p>{pick(content).description}</p>
       <div className="tag-row">
         {tags.map((tag) => (
           <span className="tag" key={tag}>
