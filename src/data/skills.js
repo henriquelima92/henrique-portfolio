@@ -1,7 +1,8 @@
 // Edit levels (0-100) and entries to reflect your actual skillset.
+// category/name: plain text, or { en, 'pt-BR' } when the wording differs per language.
 export const skillGroups = [
   {
-    category: 'Languages',
+    category: { en: 'Languages', 'pt-BR': 'Linguagens' },
     skills: [
       { name: 'C#', level: 90 },
       { name: 'JavaScript', level: 55 },
@@ -9,7 +10,7 @@ export const skillGroups = [
     ],
   },
   {
-    category: 'Engines & Tools',
+    category: { en: 'Engines & Tools', 'pt-BR': 'Engines e Ferramentas' },
     skills: [
       { name: 'Unity', level: 90 },
       { name: 'Git', level: 75 },
@@ -17,11 +18,11 @@ export const skillGroups = [
     ],
   },
   {
-    category: 'Systems & Concepts',
+    category: { en: 'Systems & Concepts', 'pt-BR': 'Sistemas e Conceitos' },
     skills: [
-      { name: 'Gameplay Systems', level: 85 },
-      { name: 'Multiplayer / Netcode', level: 60 },
-      { name: 'Performance Optimization', level: 65 },
+      { name: { en: 'Gameplay Systems', 'pt-BR': 'Sistemas de Gameplay' }, level: 85 },
+      { name: { en: 'Multiplayer / Netcode', 'pt-BR': 'Multiplayer / Netcode' }, level: 60 },
+      { name: { en: 'Performance Optimization', 'pt-BR': 'Otimização de Performance' }, level: 65 },
     ],
   },
 ]

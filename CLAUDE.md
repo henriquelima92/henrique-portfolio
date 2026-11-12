@@ -19,6 +19,12 @@ There is no test runner or linter yet. Verify changes with `npm run build` and b
 - `src/components/` — shared UI (Nav, Footer, ProjectCard, SkillBar)
 - `src/data/` — site content as plain JS arrays (`projects.js`, `skills.js`). Edit content here, not in components.
 - `src/index.css` — all styles; design tokens are CSS variables on `:root`
+- `src/i18n/` — `LanguageProvider` (EN / PT-BR, choice saved in `localStorage`) and the `useLanguage()` hook
+
+## Localization
+
+- Every user-visible string goes through `useLanguage()`: interface text via `t('section.key')` from `src/data/strings.js` (add the key to both `en` and `pt-BR`), content via `pick(value)`.
+- Content fields in `src/data/` that differ per language are `{ en: '...', 'pt-BR': '...' }`; plain strings (names, titles, tags) are shown as-is in both languages.
 
 ## Conventions
 

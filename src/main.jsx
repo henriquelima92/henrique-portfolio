@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import App from './App.jsx'
+import LanguageProvider from './i18n/LanguageProvider.jsx'
 import './index.css'
 
 // HashRouter is used (URLs look like /#/projects) instead of BrowserRouter
@@ -10,8 +11,10 @@ import './index.css'
 // sidesteps that problem entirely with zero extra config.
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <LanguageProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </LanguageProvider>
   </React.StrictMode>,
 )

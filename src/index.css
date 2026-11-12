@@ -89,9 +89,13 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .nav-inner {
+  flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,6 +132,44 @@ p {
 .nav-links a.active {
   color: var(--color-text);
   border-bottom-color: var(--color-accent);
+}
+
+/* EN | PT-BR toggle: pinned to the right edge of the bar when there's room
+   beside the centered nav content, otherwise placed after it (see below). */
+.lang-switch {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lang-switch button {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  background: transparent;
+  color: var(--color-text-dim);
+  border: 0;
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lang-switch button + button {
+  border-left: 1px solid var(--color-border);
+}
+
+.lang-switch button:hover {
+  color: var(--color-text);
+}
+
+.lang-switch button.active {
+  background: var(--color-panel-alt);
+  color: var(--color-accent);
 }
 
 /* ============================================================
@@ -504,9 +546,24 @@ p {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* Not enough side space for the pinned toggle (max-width + ~2 × toggle width):
+   put it in the flow after the nav content instead of overlapping the links. */
+@media (max-width: 1220px) {
+  .lang-switch {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    margin-right: 24px;
+  }
+}
+
 @media (max-width: 600px) {
   .skill-row {
     grid-template-columns: 100px 1fr;
+  }
+  .nav-inner {
+    flex-wrap: wrap;
+    row-gap: 12px;
   }
   .nav-links {
     gap: 16px;

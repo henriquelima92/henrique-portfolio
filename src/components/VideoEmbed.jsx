@@ -1,3 +1,5 @@
+import { useLanguage } from '../i18n/context.js'
+
 // Turns a YouTube/Vimeo page link into an embed URL, or recognises a direct video file.
 function parseVideo(url) {
   let u
@@ -27,13 +29,14 @@ function parseVideo(url) {
 }
 
 export default function VideoEmbed({ url, title }) {
+  const { t } = useLanguage()
   const video = parseVideo(url)
 
   // Unrecognised link: still offer it, just not embedded.
   if (!video) {
     return (
       <a className="video-fallback" href={url} target="_blank" rel="noreferrer">
-        watch video →
+        {t('projects.watchVideo')}
       </a>
     )
   }
@@ -43,7 +46,7 @@ export default function VideoEmbed({ url, title }) {
       {video.kind === 'iframe' ? (
         <iframe
           src={video.src}
-          title={`${title} video`}
+          title={t('projects.videoTitle', { title })}
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
           loading="lazy"

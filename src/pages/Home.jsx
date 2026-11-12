@@ -1,41 +1,42 @@
 import { Link } from 'react-router-dom'
 import { contact } from '../data/contact.js'
+import { useLanguage } from '../i18n/context.js'
 
 export default function Home() {
+  const { t, pick } = useLanguage()
+
   return (
     <section className="hero">
-      <p className="hero-eyebrow">Game Developer / Software Engineer</p>
+      <p className="hero-eyebrow">{t('home.eyebrow')}</p>
       <h1>{contact.name}</h1>
-      <p className="hero-role">
-        I build games and tools in Unity and C#, with a growing interest in web
-        development. This site is itself one of my projects — replace this line
-        with your own short pitch.
-      </p>
+      <p className="hero-role">{t('home.pitch')}</p>
       <div className="hero-actions">
         <Link to="/projects" className="btn btn-primary">
-          view projects
+          {t('home.viewProjects')}
         </Link>
         <Link to="/contact" className="btn btn-secondary">
-          get in touch
+          {t('home.getInTouch')}
         </Link>
       </div>
 
       <div className="stat-panel">
         <div className="stat-item">
-          <div className="stat-label">Role</div>
-          <div className="stat-value">Game Developer</div>
+          <div className="stat-label">{t('home.roleLabel')}</div>
+          <div className="stat-value">{t('home.roleValue')}</div>
         </div>
         <div className="stat-item">
-          <div className="stat-label">Primary Stack</div>
+          <div className="stat-label">{t('home.stackLabel')}</div>
           <div className="stat-value">C# · Unity</div>
         </div>
         <div className="stat-item">
-          <div className="stat-label">Currently Learning</div>
-          <div className="stat-value">React · Web Dev</div>
+          <div className="stat-label">{t('home.learningLabel')}</div>
+          <div className="stat-value">{t('home.learningValue')}</div>
         </div>
         <div className="stat-item">
-          <div className="stat-label">Based In</div>
-          <div className="stat-value">{contact.city}, {contact.country}</div>
+          <div className="stat-label">{t('home.basedInLabel')}</div>
+          <div className="stat-value">
+            {contact.city}, {pick(contact.country)}
+          </div>
         </div>
       </div>
     </section>

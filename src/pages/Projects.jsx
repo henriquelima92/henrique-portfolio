@@ -1,17 +1,20 @@
 import ProjectCard from '../components/ProjectCard.jsx'
 import { projects } from '../data/projects.js'
+import { useLanguage } from '../i18n/context.js'
 
 export default function Projects() {
+  const { t } = useLanguage()
+
   return (
     <>
       <header className="page-header">
-        <p className="eyebrow">Selected Work</p>
-        <h1>Projects</h1>
-        <p>Things I've built or contributed to, roughly in the order I made them.</p>
+        <p className="eyebrow">{t('projects.eyebrow')}</p>
+        <h1>{t('projects.title')}</h1>
+        <p>{t('projects.intro')}</p>
       </header>
       <div className="projects-grid">
         {projects.map((project, i) => (
-          <ProjectCard key={project.title} index={i + 1} {...project} />
+          <ProjectCard key={project.slug} index={i + 1} {...project} />
         ))}
       </div>
     </>

@@ -7,5 +7,5 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/henriquelima92/',
   whatsapp: '5551981227149',
   city: 'Porto Alegre',
-  country: 'Brazil',
+  country: { en: 'Brazil', 'pt-BR': 'Brasil' },
 }
