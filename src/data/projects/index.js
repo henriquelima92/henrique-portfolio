@@ -8,7 +8,8 @@
 //   repoUrl / demoUrl   '' hides the link
 //   content   { en, 'pt-BR' }, each with:
 //     description  summary shown on the card and under the page title
-//     sections     [{ heading, paragraphs: [...], subsections?: [{ heading, paragraphs }] }]
+//     sections     [{ heading, paragraphs: [...], subsections?: [{ heading, paragraphs, items? }] }]
+//                  items: optional list of { heading, text }, shown as labelled bullet points
 import muiraquita from './muiraquita.js'
 import bitmadness from './bitmadness.js'
 import piggyHunt from './piggy-hunt.js'

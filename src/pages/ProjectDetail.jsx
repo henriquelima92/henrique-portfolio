@@ -57,9 +57,18 @@ export default function ProjectDetail() {
             {section.subsections?.map((sub) => (
               <div className="project-subsection" key={sub.heading}>
                 <h3>{sub.heading}</h3>
-                {sub.paragraphs.map((paragraph, i) => (
+                {sub.paragraphs?.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
+                {sub.items && (
+                  <ul className="project-items">
+                    {sub.items.map((item) => (
+                      <li key={item.heading}>
+                        <span className="project-item-heading">{item.heading}.</span> {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
