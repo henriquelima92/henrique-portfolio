@@ -520,6 +520,14 @@ p {
   color: var(--color-accent);
 }
 
+/* A row with nothing to open yet (e.g. a resume not uploaded) */
+.contact-link.is-disabled,
+.contact-link.is-disabled:hover {
+  border-color: var(--color-border);
+  color: var(--color-text-dim);
+  cursor: default;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */

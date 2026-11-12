@@ -57,6 +57,7 @@ export const strings = {
       title: 'Resume',
       intro: 'Download my resume as a PDF, in English or Portuguese.',
       download: 'download ↓',
+      comingSoon: 'coming soon',
     },
     contact: {
       eyebrow: 'Get In Touch',
@@ -119,6 +120,7 @@ export const strings = {
       title: 'Currículo',
       intro: 'Baixe meu currículo em PDF, em português ou inglês.',
       download: 'baixar ↓',
+      comingSoon: 'em breve',
     },
     contact: {
       eyebrow: 'Fale Comigo',

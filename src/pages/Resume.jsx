@@ -16,18 +16,25 @@ export default function Resume() {
       </header>
       <section className="contact-section">
         <div className="contact-links">
-          {ordered.map(({ lang: code, label, file }) => (
-            <a
-              key={code}
-              className="contact-link"
-              // BASE_URL is the site's base path ('/henrique-portfolio/'), so this works on GitHub Pages.
-              href={`${import.meta.env.BASE_URL}${file}`}
-              download
-            >
-              <span>{pick(label)} · PDF</span>
-              <span>{t('resume.download')}</span>
-            </a>
-          ))}
+          {ordered.map(({ lang: code, label, file }) =>
+            file ? (
+              <a
+                key={code}
+                className="contact-link"
+                // BASE_URL is the site's base path ('/henrique-portfolio/'), so this works on GitHub Pages.
+                href={`${import.meta.env.BASE_URL}${file}`}
+                download
+              >
+                <span>{pick(label)} · PDF</span>
+                <span>{t('resume.download')}</span>
+              </a>
+            ) : (
+              <div key={code} className="contact-link is-disabled">
+                <span>{pick(label)} · PDF</span>
+                <span>{t('resume.comingSoon')}</span>
+              </div>
+            ),
+          )}
         </div>
       </section>
     </>
