@@ -2,7 +2,7 @@
 //
 // Each project file exports:
 //   slug      page URL (#/projects/<slug>); lowercase, dashes, unique
-//   title     shown as-is in both languages
+//   title     plain string for both languages, or { en, 'pt-BR' }
 //   tags      short tech/tool names
 //   videoUrl  youtube.com link, or '' for no video
 //   repoUrl / demoUrl   '' hides the link
@@ -15,5 +15,6 @@ import muiraquita from './muiraquita.js'
 import bitmadness from './bitmadness.js'
 import piggyHunt from './piggy-hunt.js'
 import rapalaFishing from './rapala-fishing.js'
+import mobileStrategyGame from './mobile-strategy-game.js'
 
-export const projects = [muiraquita, bitmadness, piggyHunt, rapalaFishing]
+export const projects = [muiraquita, bitmadness, piggyHunt, rapalaFishing, mobileStrategyGame]

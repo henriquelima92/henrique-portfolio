@@ -1,6 +1,6 @@
 export default {
   slug: 'rapala-fishing',
-  title: 'Rapala',
+  title: 'Rapala Fishing Simulator',
   tags: ['Unity', 'C#', 'Mobile', 'Beamable'],
   videoUrl: 'https://www.youtube.com/watch?v=d2Sd3o_jpDY',
   repoUrl: '',

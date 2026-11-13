@@ -4,25 +4,31 @@ export const skillGroups = [
   {
     category: { en: 'Languages', 'pt-BR': 'Linguagens' },
     skills: [
-      { name: 'C#', level: 90 },
-      { name: 'JavaScript', level: 55 },
-      { name: 'HLSL / Shaders', level: 40 },
+      { name: 'C#', level: 100 },
+      { name: 'JavaScript', level: 30 },
+      { name: 'Python', level: 30 },
+      { name: 'Java', level: 20 },
+      { name: 'C++', level: 20 },
     ],
   },
   {
     category: { en: 'Engines & Tools', 'pt-BR': 'Engines e Ferramentas' },
     skills: [
-      { name: 'Unity', level: 90 },
-      { name: 'Git', level: 75 },
-      { name: 'React', level: 45 },
+      { name: 'Unity', level: 100 },
+      { name: 'Godot', level: 20 },
+      { name: 'Git', level: 100 },
+      { name: 'React', level: 20 },
     ],
   },
   {
     category: { en: 'Systems & Concepts', 'pt-BR': 'Sistemas e Conceitos' },
     skills: [
-      { name: { en: 'Gameplay Systems', 'pt-BR': 'Sistemas de Gameplay' }, level: 85 },
-      { name: { en: 'Multiplayer / Netcode', 'pt-BR': 'Multiplayer / Netcode' }, level: 60 },
-      { name: { en: 'Performance Optimization', 'pt-BR': 'Otimização de Performance' }, level: 65 },
+      { name: { en: 'Gameplay Systems', 'pt-BR': 'Sistemas de Gameplay' }, level: 90 },
+      { name: { en: 'Tools & Editor Scripting', 'pt-BR': 'Ferramentas e Editor Scripting' }, level: 90 },
+      { name: { en: 'Metagame & UI', 'pt-BR': 'Metagame e UI' }, level: 80 },
+      { name: { en: 'Performance Optimization', 'pt-BR': 'Otimização de Performance' }, level: 70 },
+      { name: { en: 'Backend Integration', 'pt-BR': 'Integração com Backend' }, level: 70 },
+      { name: 'Multiplayer', level: 60 },
     ],
   },
 ]
