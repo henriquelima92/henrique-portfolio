@@ -19,7 +19,10 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <span className="nav-logo">~/{contact.name.toLowerCase().replace(/\s+/g, '-')}</span>
+        <NavLink to="/" className="nav-logo" aria-label={contact.name}>
+          {/* public/logo.svg: the favicon artwork cropped to the dog */}
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" width="64" height="36" />
+        </NavLink>
         <ul className="nav-links">
           {links.map(({ to, key, end }) => (
             <li key={to}>

@@ -117,12 +117,22 @@ main {
   margin: 0 auto;
 }
 
+/* Site logo: the favicon, linking home */
 .nav-logo {
-  white-space: nowrap;
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  color: var(--color-accent);
-  letter-spacing: 0.02em;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+}
+
+.nav-logo img {
+  display: block;
+  width: 64px;
+  height: 36px;
+  transition: transform 0.15s ease;
+}
+
+.nav-logo:hover img {
+  transform: scale(1.06);
 }
 
 .nav-links {
@@ -785,7 +795,7 @@ main {
     gap: 8px 20px;
   }
   .lang-switch {
-    margin-top: 13px;
+    margin-top: 20px;
   }
 }
 

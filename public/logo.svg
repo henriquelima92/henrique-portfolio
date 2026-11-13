@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 14 64 36">
+  <!-- Header logo: same artwork as favicon.svg, cropped to the dog, no background. Keep both in sync. -->
+  <g fill="#e8b34d">
+    <!-- tail, long body, short legs -->
+    <path d="M8 29 Q2 26 2 16 Q5 24 10 26 Z"/>
+    <rect x="6" y="24" width="46" height="18" rx="9"/>
+    <rect x="9" y="38" width="5" height="10" rx="2"/>
+    <rect x="16" y="38" width="5" height="10" rx="2"/>
+    <rect x="40" y="38" width="5" height="10" rx="2"/>
+    <rect x="46" y="38" width="5" height="10" rx="2"/>
+    <!-- neck, head, snout -->
+    <path d="M44 28 L50 17 L57 18 Q57 30 50 36 Z"/>
+    <ellipse cx="53" cy="22" rx="7" ry="6"/>
+    <path d="M57 20 L63 24 Q63.5 26.5 61 27 L56 27 Z"/>
+  </g>
+  <!-- ear -->
+  <path d="M49 18 Q44 21 46 29 Q49.5 28 51.5 21 Z" fill="#b8861b"/>
+  <!-- eye and HL monogram, in the background color -->
+  <g fill="#12141c">
+    <circle cx="55.5" cy="21" r="1.2"/>
+    <rect x="18" y="28" width="3" height="10"/>
+    <rect x="25" y="28" width="3" height="10"/>
+    <rect x="18" y="31.5" width="10" height="3"/>
+    <rect x="32" y="28" width="3" height="10"/>
+    <rect x="32" y="35" width="8" height="3"/>
+  </g>
+</svg>
