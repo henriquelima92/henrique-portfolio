@@ -81,9 +81,6 @@ export const strings = {
       intro: 'The best ways to reach me or find more of my work.',
       email: 'Email',
     },
-    footer: {
-      builtWith: 'built with React, deployed on GitHub Pages',
-    },
   },
 
   'pt-BR': {
@@ -159,9 +156,6 @@ export const strings = {
       title: 'Contato',
       intro: 'As melhores formas de falar comigo ou conhecer mais do meu trabalho.',
       email: 'E-mail',
-    },
-    footer: {
-      builtWith: 'feito com React, publicado no GitHub Pages',
     },
   },
 }

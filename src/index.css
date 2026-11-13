@@ -73,6 +73,19 @@ p {
   outline-offset: 3px;
 }
 
+/* Page column: nav, main, footer. main grows so the footer sits at the
+   bottom of the window even when a page is short (e.g. Resume). */
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
