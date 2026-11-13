@@ -105,6 +105,7 @@ p {
 }
 
 .nav-logo {
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 0.95rem;
   color: var(--color-accent);
@@ -120,6 +121,7 @@ p {
 }
 
 .nav-links a {
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--color-text-dim);
@@ -487,6 +489,143 @@ p {
 }
 
 /* ============================================================
+   TIMELINE (experience, education)
+   ============================================================ */
+.timeline-section {
+  padding: 0 24px 56px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+  margin-bottom: 28px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dates on the left, details on the right, joined by a vertical line */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 28px;
+}
+
+.timeline-dates {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  margin: 4px 0 0;
+  text-align: right;
+}
+
+.timeline-body {
+  position: relative;
+  border-left: 1px solid var(--color-border);
+  padding: 0 0 40px 28px;
+}
+
+.timeline-body::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.timeline-item:last-child .timeline-body {
+  padding-bottom: 8px;
+}
+
+.timeline-body h2 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.timeline-org {
+  margin: 0 0 10px;
+  color: var(--color-teal);
+  font-size: 0.92rem;
+}
+
+.timeline-body p {
+  max-width: 640px;
+}
+
+.timeline-highlights {
+  max-width: 640px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-dim);
+}
+
+.timeline-highlights li {
+  margin-bottom: 6px;
+}
+
+.timeline-highlights li::marker {
+  color: var(--color-accent-dim);
+}
+
+.timeline-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.timeline-projects .tag:hover {
+  border-color: var(--color-accent-dim);
+  color: var(--color-accent);
+}
+
+/* Compact two-column rows: courses, languages */
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+}
+
+.course {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.course-title {
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.course-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  white-space: nowrap;
+}
+
+/* ============================================================
    SKILLS
    ============================================================ */
 .skills-section {
@@ -607,16 +746,55 @@ p {
   }
 }
 
-@media (max-width: 600px) {
-  .skill-row {
-    grid-template-columns: 100px 1fr;
+/* Too narrow for logo + all links on one line: links move to a row below the logo,
+   wrapping as needed; the language toggle stays top-right beside the logo. */
+@media (max-width: 1000px) {
+  .nav {
+    align-items: flex-start;
   }
   .nav-inner {
     flex-wrap: wrap;
     row-gap: 12px;
   }
   .nav-links {
-    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+  .lang-switch {
+    margin-top: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* The nav wraps to several rows here; let it scroll away instead of pinning it */
+  .nav {
+    position: static;
+  }
+  .skill-row {
+    grid-template-columns: 100px 1fr;
+  }
+  .nav-links {
+    gap: 8px 16px;
+  }
+  /* Timeline: dates above the details instead of beside them */
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .timeline-dates {
+    text-align: left;
+    padding-left: 28px;
+    border-left: 1px solid var(--color-border);
+    margin: 0;
+    padding-bottom: 4px;
+  }
+  .course {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .course-meta {
+    white-space: normal;
   }
 }
 

@@ -6,6 +6,8 @@ import LanguageSwitcher from './LanguageSwitcher.jsx'
 const links = [
   { to: '/', key: 'nav.home', end: true },
   { to: '/projects', key: 'nav.projects' },
+  { to: '/experience', key: 'nav.experience' },
+  { to: '/education', key: 'nav.education' },
   { to: '/skills', key: 'nav.skills' },
   { to: '/resume', key: 'nav.resume' },
   { to: '/contact', key: 'nav.contact' },

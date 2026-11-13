@@ -14,10 +14,10 @@ There is no test runner or linter yet. Verify changes with `npm run build` and b
 ## Layout
 
 - `src/main.jsx` — entry; wraps the app in `HashRouter`
-- `src/App.jsx` — route table (`/`, `/projects`, `/projects/:slug`, `/skills`, `/resume`, `/contact`)
+- `src/App.jsx` — route table (`/`, `/projects`, `/projects/:slug`, `/experience`, `/education`, `/skills`, `/resume`, `/contact`)
 - `src/pages/` — one component per route
 - `src/components/` — shared UI (Nav, Footer, ProjectCard, SkillBar)
-- `src/data/` — site content as plain JS arrays (`projects/` (one file per project, order in `projects/index.js`), `skills.js`, `contact.js`, `resume.js`, `strings.js`). Edit content here, not in components.
+- `src/data/` — site content as plain JS arrays (`projects/` (one file per project, order in `projects/index.js`), `experience.js`, `education.js`, `skills.js`, `contact.js`, `resume.js`, `strings.js`). Edit content here, not in components.
 - `src/index.css` — all styles; design tokens are CSS variables on `:root`
 - `src/i18n/` — `LanguageProvider` (EN / PT-BR, choice saved in `localStorage`) and the `useLanguage()` hook
 

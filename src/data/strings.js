@@ -15,6 +15,8 @@ export const strings = {
     nav: {
       home: 'home',
       projects: 'projects',
+      experience: 'experience',
+      education: 'education',
       skills: 'skills',
       resume: 'resume',
       contact: 'contact',
@@ -34,7 +36,7 @@ export const strings = {
     projects: {
       eyebrow: 'Selected Work',
       title: 'Projects',
-      intro: "Things I've built or contributed to, roughly in the order I made them.",
+      intro: "Games I've worked on, from academic projects to commercial releases, with my role and the technical challenges behind each one.",
       repo: 'repo →',
       play: 'play →',
       viewRepo: 'view repo →',
@@ -44,6 +46,22 @@ export const strings = {
       backToProjects: '← back to projects',
       watchVideo: 'watch video →',
       videoTitle: '{title} video',
+    },
+    experience: {
+      eyebrow: 'Professional Background',
+      title: 'Experience',
+      intro: 'Where I have worked, most recent first.',
+    },
+    education: {
+      eyebrow: 'Background',
+      title: 'Education',
+      intro: 'Degrees and complementary courses.',
+      degrees: 'Degrees',
+      courses: 'Complementary Courses',
+    },
+    timeline: {
+      present: 'Present',
+      relatedProjects: 'Projects:',
     },
     skills: {
       eyebrow: 'Competencies',
@@ -76,6 +94,8 @@ export const strings = {
     nav: {
       home: 'início',
       projects: 'projetos',
+      experience: 'experiência',
+      education: 'formação',
       skills: 'habilidades',
       resume: 'currículo',
       contact: 'contato',
@@ -95,7 +115,7 @@ export const strings = {
     projects: {
       eyebrow: 'Trabalhos Selecionados',
       title: 'Projetos',
-      intro: 'Coisas que criei ou em que contribuí, mais ou menos na ordem em que as fiz.',
+      intro: 'Jogos em que trabalhei, de projetos acadêmicos a lançamentos comerciais, com meu papel e os desafios técnicos de cada um.',
       repo: 'repositório →',
       play: 'jogar →',
       viewRepo: 'ver repositório →',
@@ -105,6 +125,22 @@ export const strings = {
       backToProjects: '← voltar aos projetos',
       watchVideo: 'assistir vídeo →',
       videoTitle: 'Vídeo de {title}',
+    },
+    experience: {
+      eyebrow: 'Trajetória Profissional',
+      title: 'Experiência',
+      intro: 'Onde já trabalhei, do mais recente ao mais antigo.',
+    },
+    education: {
+      eyebrow: 'Formação',
+      title: 'Formação Acadêmica',
+      intro: 'Graduação, especialização e cursos complementares.',
+      degrees: 'Graduação e Especialização',
+      courses: 'Cursos Complementares',
+    },
+    timeline: {
+      present: 'Atual',
+      relatedProjects: 'Projetos:',
     },
     skills: {
       eyebrow: 'Competências',
