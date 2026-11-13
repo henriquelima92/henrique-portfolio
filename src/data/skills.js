@@ -23,12 +23,19 @@ export const skillGroups = [
   {
     category: { en: 'Systems & Concepts', 'pt-BR': 'Sistemas e Conceitos' },
     skills: [
-      { name: { en: 'Gameplay Systems', 'pt-BR': 'Sistemas de Gameplay' }, level: 90 },
+      { name: { en: 'Gameplay Systems', 'pt-BR': 'Sistemas de Gameplay' }, level: 100 },
       { name: { en: 'Tools & Editor Scripting', 'pt-BR': 'Ferramentas e Editor Scripting' }, level: 90 },
-      { name: { en: 'Metagame & UI', 'pt-BR': 'Metagame e UI' }, level: 80 },
+      { name: { en: 'Metagame & UI', 'pt-BR': 'Metagame e UI' }, level: 100 },
       { name: { en: 'Performance Optimization', 'pt-BR': 'Otimização de Performance' }, level: 70 },
       { name: { en: 'Backend Integration', 'pt-BR': 'Integração com Backend' }, level: 70 },
       { name: 'Multiplayer', level: 60 },
+    ],
+  },
+  {
+    category: { en: 'AI Tools', 'pt-BR': 'Ferramentas de IA' },
+    skills: [
+      { name: 'Claude', level: 80 },
+      { name: 'GitHub Copilot', level: 60 },
     ],
   },
 ]
