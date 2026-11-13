@@ -4,7 +4,17 @@ import { formatDate } from '../i18n/format.js'
 import { projects as allProjects } from '../data/projects/index.js'
 
 // One entry of a timeline (a job or a degree).
-export default function TimelineItem({ title, organization, location, start, end, summary, highlights, projects = [] }) {
+export default function TimelineItem({
+  title,
+  organization,
+  location,
+  start,
+  end,
+  summary,
+  highlights,
+  projects = [],
+  links = [],
+}) {
   const { lang, t, pick } = useLanguage()
   const linked = projects.map((slug) => allProjects.find((p) => p.slug === slug)).filter(Boolean)
   const points = pick(highlights) ?? []
@@ -35,6 +45,15 @@ export default function TimelineItem({ title, organization, location, start, end
               <Link key={p.slug} to={`/projects/${p.slug}`} className="tag">
                 {pick(p.title)}
               </Link>
+            ))}
+          </p>
+        )}
+        {links.length > 0 && (
+          <p className="timeline-links">
+            {links.map((link) => (
+              <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
+                {pick(link.label)}
+              </a>
             ))}
           </p>
         )}

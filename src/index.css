@@ -604,6 +604,23 @@ main {
   font-size: 0.75rem;
 }
 
+.timeline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 10px 0 0;
+}
+
+.timeline-links a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-teal);
+}
+
+.timeline-links a:hover {
+  color: var(--color-accent);
+}
+
 .timeline-projects .tag:hover {
   border-color: var(--color-accent-dim);
   color: var(--color-accent);

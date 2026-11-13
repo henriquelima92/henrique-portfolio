@@ -25,6 +25,7 @@ export default function Experience() {
               summary={job.summary}
               highlights={job.highlights}
               projects={job.projects}
+              links={job.links}
             />
           ))}
         </ol>

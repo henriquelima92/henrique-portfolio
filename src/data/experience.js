@@ -2,6 +2,7 @@
 // start/end: 'YYYY-MM' (end: null = current job). Text fields: plain string or { en, 'pt-BR' }.
 // location: '' hides it.
 // projects: slugs from src/data/projects/ to link from this job.
+// links: optional external links [{ label, url }] shown under the job (site only, not in the resume PDFs).
 export const experience = [
   {
     role: { en: 'Senior Software Engineer', 'pt-BR': 'Engenheiro de Software Sênior' },
@@ -28,6 +29,12 @@ export const experience = [
       ],
     },
     projects: ['rapala-fishing', 'mobile-strategy-game'],
+    links: [
+      {
+        label: { en: 'Work GitHub (contributions) →', 'pt-BR': 'GitHub de trabalho (contribuições) →' },
+        url: 'https://github.com/henrique-lima-fortis',
+      },
+    ],
   },
   {
     role: { en: 'Game Developer', 'pt-BR': 'Desenvolvedor de Jogos' },
