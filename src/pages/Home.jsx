@@ -29,10 +29,6 @@ export default function Home() {
           <div className="stat-value">C# · Unity</div>
         </div>
         <div className="stat-item">
-          <div className="stat-label">{t('home.learningLabel')}</div>
-          <div className="stat-value">{t('home.learningValue')}</div>
-        </div>
-        <div className="stat-item">
           <div className="stat-label">{t('home.basedInLabel')}</div>
           <div className="stat-value">
             {contact.city}, {pick(contact.country)}

@@ -21,16 +21,14 @@ export const strings = {
       language: 'Language',
     },
     home: {
-      eyebrow: 'Game Developer / Software Engineer',
+      eyebrow: 'Game Developer / Senior Software Engineer',
       pitch:
-        'I build games and tools in Unity and C#, with a growing interest in web development. This site is itself one of my projects — replace this line with your own short pitch.',
+        'Game programmer building in Unity and C# since 2018, focused on gameplay systems, metagame and internal tools.',
       viewProjects: 'view projects',
       getInTouch: 'get in touch',
       roleLabel: 'Role',
       roleValue: 'Game Developer',
       stackLabel: 'Primary Stack',
-      learningLabel: 'Currently Learning',
-      learningValue: 'React · Web Dev',
       basedInLabel: 'Based In',
     },
     projects: {
@@ -84,16 +82,14 @@ export const strings = {
       language: 'Idioma',
     },
     home: {
-      eyebrow: 'Desenvolvedor de Jogos / Engenheiro de Software',
+      eyebrow: 'Desenvolvedor de Jogos / Engenheiro de Software Sênior',
       pitch:
-        'Crio jogos e ferramentas em Unity e C#, com um interesse crescente em desenvolvimento web. Este site também é um dos meus projetos — substitua esta linha pela sua própria apresentação.',
+        'Programador de jogos desenvolvendo em Unity e C# desde 2018, com foco em sistemas de gameplay, metagame e ferramentas internas.',
       viewProjects: 'ver projetos',
       getInTouch: 'entrar em contato',
       roleLabel: 'Função',
       roleValue: 'Desenvolvedor de Jogos',
       stackLabel: 'Stack Principal',
-      learningLabel: 'Aprendendo Agora',
-      learningValue: 'React · Desenvolvimento Web',
       basedInLabel: 'Localização',
     },
     projects: {
