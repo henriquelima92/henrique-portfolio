@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/context.js'
 
-export default function ProjectCard({ slug, title, content, tags, repoUrl, demoUrl }) {
+export default function ProjectCard({ slug, title, content, tags, repoUrl, demoUrl, demoLabel }) {
   const { t, pick } = useLanguage()
 
   return (
@@ -28,7 +28,7 @@ export default function ProjectCard({ slug, title, content, tags, repoUrl, demoU
         )}
         {demoUrl && (
           <a href={demoUrl} target="_blank" rel="noreferrer">
-            {t('projects.play')}
+            {pick(demoLabel) ?? t('projects.play')}
           </a>
         )}
       </div>

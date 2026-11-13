@@ -55,9 +55,10 @@ export const strings = {
     education: {
       eyebrow: 'Background',
       title: 'Education',
-      intro: 'Degrees and complementary courses.',
+      intro: 'Degrees, complementary courses and languages.',
       degrees: 'Degrees',
       courses: 'Complementary Courses',
+      languages: 'Languages',
     },
     timeline: {
       present: 'Present',
@@ -69,11 +70,10 @@ export const strings = {
       intro: "A rough sense of where I'm strongest and where I'm actively growing.",
     },
     resume: {
-      eyebrow: 'Experience',
+      eyebrow: 'PDF Download',
       title: 'Resume',
       intro: 'Download my resume as a PDF, in English or Portuguese.',
       download: 'download ↓',
-      comingSoon: 'coming soon',
     },
     contact: {
       eyebrow: 'Get In Touch',
@@ -131,9 +131,10 @@ export const strings = {
     education: {
       eyebrow: 'Formação',
       title: 'Formação Acadêmica',
-      intro: 'Graduação, especialização e cursos complementares.',
+      intro: 'Graduação, especialização, cursos complementares e idiomas.',
       degrees: 'Graduação e Especialização',
       courses: 'Cursos Complementares',
+      languages: 'Idiomas',
     },
     timeline: {
       present: 'Atual',
@@ -145,11 +146,10 @@ export const strings = {
       intro: 'Uma ideia geral de onde sou mais forte e de onde estou evoluindo.',
     },
     resume: {
-      eyebrow: 'Experiência',
+      eyebrow: 'Download em PDF',
       title: 'Currículo',
       intro: 'Baixe meu currículo em PDF, em português ou inglês.',
       download: 'baixar ↓',
-      comingSoon: 'em breve',
     },
     contact: {
       eyebrow: 'Fale Comigo',

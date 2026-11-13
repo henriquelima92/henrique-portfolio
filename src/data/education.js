@@ -19,8 +19,8 @@ export const degrees = [
   },
   {
     degree: {
-      en: 'Undergraduate Degree in Game Development',
-      'pt-BR': 'Graduação em Jogos Digitais',
+      en: 'Technologist Degree in Game Development',
+      'pt-BR': 'Tecnólogo em Jogos Digitais',
     },
     school: 'Universidade do Vale do Rio dos Sinos (Unisinos)',
     location: 'Porto Alegre, RS',
@@ -52,3 +52,10 @@ export const courses = [
   { title: 'Unity 2016', provider: 'Portal Luciano Augusto', date: '2016-08' },
 ]
 
+
+// Spoken languages.
+export const spokenLanguages = [
+  { name: { en: 'Portuguese', 'pt-BR': 'Português' }, level: { en: 'Native / Fluent', 'pt-BR': 'Nativo / Fluente' } },
+  { name: { en: 'English', 'pt-BR': 'Inglês' }, level: { en: 'Advanced', 'pt-BR': 'Avançado' } },
+  { name: { en: 'Italian', 'pt-BR': 'Italiano' }, level: { en: 'Basic', 'pt-BR': 'Básico' } },
+]

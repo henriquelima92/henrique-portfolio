@@ -26,7 +26,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const { tags, videoUrl, repoUrl, demoUrl } = project
+  const { tags, videoUrl, repoUrl, demoUrl, demoLabel } = project
   const title = pick(project.title)
   const { description, sections = [], note } = pick(project.content)
 
@@ -78,7 +78,7 @@ export default function ProjectDetail() {
           <div className="project-detail-actions">
             {demoUrl && (
               <a href={demoUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
-                {t('projects.play')}
+                {pick(demoLabel) ?? t('projects.play')}
               </a>
             )}
             {repoUrl && (

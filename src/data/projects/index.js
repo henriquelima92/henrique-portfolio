@@ -6,6 +6,7 @@
 //   tags      short tech/tool names
 //   videoUrl  youtube.com link, or '' for no video
 //   repoUrl / demoUrl   '' hides the link
+//   demoLabel optional { en, 'pt-BR' } text for the demo link (default: "play →")
 //   content   { en, 'pt-BR' }, each with:
 //     description  summary shown on the card and under the page title
 //     sections     [{ heading, paragraphs: [...], subsections?: [{ heading, paragraphs, items? }] }]

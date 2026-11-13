@@ -8,6 +8,7 @@ Personal portfolio: React 18 + Vite 5 + React Router 6, plain CSS, deployed to G
 - `npm run build` — production build to `dist/`
 - `npm run preview` — serve the built `dist/`
 - `npm run deploy` — manual deploy via `gh-pages` (CI deploy is in `.github/workflows/deploy.yml`)
+- `npm run resume` — regenerate the resume PDFs listed in `src/data/resume.js` from the site data (uses headless Chrome/Edge; set `CHROME_PATH` to override). Re-run after changing experience, education, skills, projects or contact info.
 
 There is no test runner or linter yet. Verify changes with `npm run build` and by checking the page in the dev server.
 

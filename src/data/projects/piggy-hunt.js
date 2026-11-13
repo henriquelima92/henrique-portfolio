@@ -5,6 +5,7 @@ export default {
   videoUrl: 'https://www.youtube.com/watch?v=bgd-XxwxSWw',
   repoUrl: '',
   demoUrl: 'https://store.steampowered.com/app/1702320/PIGGY_Hunt/',
+  demoLabel: { en: 'Steam page →', 'pt-BR': 'página na Steam →' },
 
   content: {
     en: {
