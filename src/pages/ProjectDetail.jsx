@@ -26,9 +26,9 @@ export default function ProjectDetail() {
     )
   }
 
-  const { tags, videoUrl, repoUrl, demoUrl, demoLabel } = project
+  const { tags, videoUrl, repoUrl, demoUrl, demoLabel, pressUrl } = project
   const title = pick(project.title)
-  const { description, sections = [], note } = pick(project.content)
+  const { description, sections = [], note, press } = pick(project.content)
 
   return (
     <>
@@ -73,6 +73,14 @@ export default function ProjectDetail() {
             ))}
           </div>
         ))}
+        {pressUrl && press && (
+          <p className="project-note project-press">
+            {press.text}{' '}
+            <a href={pressUrl} target="_blank" rel="noreferrer">
+              {press.linkLabel}
+            </a>
+          </p>
+        )}
         {note && <p className="project-note">{note}</p>}
         {(repoUrl || demoUrl) && (
           <div className="project-detail-actions">

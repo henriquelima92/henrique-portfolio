@@ -5,6 +5,7 @@ export default {
   videoUrl: 'https://www.youtube.com/watch?v=d2Sd3o_jpDY',
   repoUrl: '',
   demoUrl: '',
+  pressUrl: 'https://www.rapala.com/us_en/blog/rapala-fishing-sim-your-newest-app-addiction',
 
   content: {
     en: {
@@ -39,6 +40,10 @@ export default {
           ],
         },
       ],
+      press: {
+        text: 'The game was also featured on the official Rapala blog, which introduced it to the brand’s community of anglers as “your newest app addiction”.',
+        linkLabel: 'Read the article on rapala.com',
+      },
       note: 'Unfortunately, the game is no longer available on the Play Store or the App Store.',
     },
 
@@ -74,6 +79,10 @@ export default {
           ],
         },
       ],
+      press: {
+        text: 'O jogo também foi destaque no blog oficial da Rapala, que o apresentou à comunidade de pescadores da marca como “o seu novo vício em aplicativos”.',
+        linkLabel: 'Leia o artigo em rapala.com',
+      },
       note: 'Infelizmente, o jogo não está mais disponível na Play Store nem na App Store.',
     },
   },
