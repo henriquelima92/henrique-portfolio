@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
+import Analytics from './components/Analytics.jsx'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import ProjectDetail from './pages/ProjectDetail.jsx'
@@ -13,6 +14,7 @@ import Contact from './pages/Contact.jsx'
 export default function App() {
   return (
     <>
+      <Analytics />
       <Nav />
       <main>
         <Routes>
