@@ -562,6 +562,12 @@ main {
   text-align: right;
 }
 
+.timeline-duration {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-text-dim);
+}
+
 .timeline-body {
   position: relative;
   border-left: 1px solid var(--color-border);

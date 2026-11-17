@@ -63,6 +63,7 @@ export const strings = {
     timeline: {
       present: 'Present',
       relatedProjects: 'Projects:',
+      duration: { year: 'yr', years: 'yrs', month: 'mo', months: 'mos' },
     },
     skills: {
       eyebrow: 'Competencies',
@@ -139,6 +140,7 @@ export const strings = {
     timeline: {
       present: 'Atual',
       relatedProjects: 'Projetos:',
+      duration: { year: 'ano', years: 'anos', month: 'mês', months: 'meses' },
     },
     skills: {
       eyebrow: 'Competências',

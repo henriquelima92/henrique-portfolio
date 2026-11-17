@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/context.js'
-import { formatDate } from '../i18n/format.js'
+import { formatDate, formatDuration } from '../i18n/format.js'
 import { projects as allProjects } from '../data/projects/index.js'
 
 // One entry of a timeline (a job or a degree).
@@ -14,6 +14,7 @@ export default function TimelineItem({
   highlights,
   projects = [],
   links = [],
+  showDuration = false,
 }) {
   const { lang, t, pick } = useLanguage()
   const linked = projects.map((slug) => allProjects.find((p) => p.slug === slug)).filter(Boolean)
@@ -23,6 +24,7 @@ export default function TimelineItem({
     <li className="timeline-item">
       <p className="timeline-dates">
         {formatDate(start, lang)} – {end ? formatDate(end, lang) : t('timeline.present')}
+        {showDuration && <span className="timeline-duration">{formatDuration(start, end, t)}</span>}
       </p>
       <div className="timeline-body">
         <h2>{pick(title)}</h2>
